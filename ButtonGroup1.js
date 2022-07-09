@@ -21,6 +21,4 @@ export class ButtonGroup1 extends Component {
             </div>
         );
     }
-
-
 }
