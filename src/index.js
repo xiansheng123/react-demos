@@ -6,12 +6,19 @@ import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import Invoices from "./demo-component/Invoices";
 import Expenses from "./demo-component/Expenses";
+import {PageContext} from "./context";
 
 const rootElement = document.getElementById('root')
 
 // react 18
 const root = ReactDOM.createRoot(document.querySelector('#root'))
+
+
 root.render(
+    <PageContext.Provider value={{
+        token:"token2",
+        name:"name2",
+    }}>
     <BrowserRouter>
         <Routes>
             <Route path="/" element={<App/>}>
@@ -19,7 +26,9 @@ root.render(
                 <Route path="/expenses" element={<Expenses/>}></Route>
             </Route>
         </Routes>
-    </BrowserRouter>)
+    </BrowserRouter>
+    </PageContext.Provider>
+)
 
 // react 17
 // ReactDOM.render(
