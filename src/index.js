@@ -7,6 +7,7 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import Invoices from "./demo-component/Invoices";
 import Expenses from "./demo-component/Expenses";
 import {PageContext} from "./context";
+import Counter from "./demo-component/Counter";
 
 const rootElement = document.getElementById('root')
 
@@ -24,6 +25,7 @@ root.render(
             <Route path="/" element={<App/>}>
                 <Route path="/invoices" element={<Invoices/>}></Route>
                 <Route path="/expenses" element={<Expenses/>}></Route>
+                <Route path="/counter" element={<Counter/>}></Route>
             </Route>
         </Routes>
     </BrowserRouter>

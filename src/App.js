@@ -35,7 +35,8 @@ class App extends Component {
                     paddingBottom:"1rem"
                 }}>
                     <Link to="/invoices">invoices</Link> |{" "}
-                    <Link to="/expenses">expenses</Link>
+                    <Link to="/expenses">expenses</Link> |{" "}
+                    <Link to="/counter">counter</Link>
                 </nav>
                 <Outlet></Outlet>
                 {/* todo 2. this is first demo*/}
