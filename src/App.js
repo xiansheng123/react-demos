@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
-import {ButtonGroup1} from './demo-component/ButtonGroup1'
-import {ButtonGroup2} from './demo-component/ButtonGroup2'
-import {Link,Outlet} from "react-router-dom";
+import {Link, Outlet} from "react-router-dom";
 
 
 class App extends Component {
@@ -13,16 +11,6 @@ class App extends Component {
             themeColor: "blue",
             btnId: 0
         }
-    }
-
-    handleClick(color) {
-        console.log("app: " + color);
-        const number = getRandomInt(0, 10000);
-        this.setState({
-                themeColor: color,
-                btnId: number
-            }
-        )
     }
 
     render() {
@@ -36,7 +24,9 @@ class App extends Component {
                 }}>
                     <Link to="/invoices">invoices</Link> |{" "}
                     <Link to="/expenses">expenses</Link> |{" "}
-                    <Link to="/counter">counter</Link>
+                    <Link to="/counter">counter</Link>|{" "}
+                    <Link to="/buttonGroupParent">ButtonGroupParent</Link>
+
                 </nav>
                 <Outlet></Outlet>
                 {/* todo 2. this is first demo*/}
@@ -45,11 +35,6 @@ class App extends Component {
                 {/*<ButtonGroup1 themeColor={this.state.themeColor}*/}
                 {/*              handleClick={(color) => this.handleClick(color)}/>*/}
 
-                {/*<h1 style={{color: this.state.themeColor}}> this my first second react</h1>*/}
-                {/*/!*use key to render component everytime*!/*/}
-                {/*<ButtonGroup2 key={this.state.btnId} themeColor={this.state.themeColor}*/}
-                {/*              handleClick={(color) => this.handleClick(color)}/>*/}
-                {/*</div>*/}
             </div>
         );
     }
@@ -59,7 +44,5 @@ class App extends Component {
 
 export default App;
 
-function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+
 
